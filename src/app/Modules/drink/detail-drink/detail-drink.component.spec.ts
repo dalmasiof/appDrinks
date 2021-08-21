@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RandomCockTailComponent } from './random-cock-tail.component';
+import { DetailDrinkComponent } from './detail-drink.component';
 
-describe('RandomCockTailComponent', () => {
-  let component: RandomCockTailComponent;
-  let fixture: ComponentFixture<RandomCockTailComponent>;
+describe('DetailDrinkComponent', () => {
+  let component: DetailDrinkComponent;
+  let fixture: ComponentFixture<DetailDrinkComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RandomCockTailComponent ]
+      declarations: [ DetailDrinkComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RandomCockTailComponent);
+    fixture = TestBed.createComponent(DetailDrinkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

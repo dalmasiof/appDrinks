@@ -1,0 +1,64 @@
+<mat-grid-list cols=1 rowHeight="50px">
+    <mat-grid-tile>
+        <button mat-raised-button (click)="randomDrink()">Give a Drink</button>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols=1 rowHeight="500px">
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Name of drink</mat-card-title>
+                <mat-card-subtitle>Alcolic</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://images.stockfreeimages.com/1433/sfixl/14337344.jpg" width="100px"
+                height="200px">
+            <mat-card-content  style="width: 200px; overflow: scroll; height: 100px;">
+                <mat-list>
+                    <mat-list-item>
+                        <div mat-line> - 500 g of lemon</div>   
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <div mat-line> - 500 g of lemon</div>   
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <div mat-line> - 500 g of lemon</div>   
+                    </mat-list-item>
+
+                </mat-list>
+                <!-- <mat-icon>brightness_1</mat-icon>1 lemon
+                <p>2 slices of orange</p>
+                <p>1/2 tequila</p> -->
+
+            </mat-card-content>
+
+            <mat-card-actions>
+                <mat-grid-list cols=3>
+                    <mat-grid-tile>
+                        <span>
+                            <button mat-icon-button>
+                                <mat-icon>checked</mat-icon>
+                            </button>
+                        </span>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <span>
+                        </span>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <span>
+                            <button mat-icon-button>
+                                <mat-icon>close</mat-icon>
+                            </button>
+                        </span>
+                    </mat-grid-tile>
+
+                </mat-grid-list>
+
+
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

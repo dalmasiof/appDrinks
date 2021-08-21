@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailsCockTailComponent } from './details-cock-tail.component';
+import { SearchDrinkComponent } from './search-drink.component';
 
-describe('DetailsCockTailComponent', () => {
-  let component: DetailsCockTailComponent;
-  let fixture: ComponentFixture<DetailsCockTailComponent>;
+describe('SearchDrinkComponent', () => {
+  let component: SearchDrinkComponent;
+  let fixture: ComponentFixture<SearchDrinkComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailsCockTailComponent ]
+      declarations: [ SearchDrinkComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailsCockTailComponent);
+    fixture = TestBed.createComponent(SearchDrinkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,6 +8,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatDialogModule } from '@angular/material/dialog';
 import { DrinkRoutingModule } from './drink-routing-module';
 
 
@@ -20,7 +22,7 @@ import { DrinkRoutingModule } from './drink-routing-module';
   declarations: [
     RandomDrinkComponent,
     DetailDrinkComponent,
-    SearchDrinkComponent
+    SearchDrinkComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,9 @@ import { DrinkRoutingModule } from './drink-routing-module';
     MatCardModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule,
+    MatTooltipModule
   ]
   
   

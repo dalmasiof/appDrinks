@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DrinkService } from 'src/app/Core/services/drink.service';
 
 @Component({
   selector: 'app-detail-drink',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailDrinkComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data:any,private drinkSvc:DrinkService) { }
 
   ngOnInit(): void {
+    debugger
+    // this.drinkSvc.getById(this.drinkModel.idDrink).toPromise().then(x => {
+    //   drinkDetails = x.drinks[0];
+    // })
+    var x = this.data.componentInstance;
+
+
+    console.log(this.data)
   }
 
 }

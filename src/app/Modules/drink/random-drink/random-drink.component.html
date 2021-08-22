@@ -1,42 +1,50 @@
-
-
 <mat-grid-list *ngIf="drinkModel != null" cols=1 rowHeight="550px">
-    
+
     <mat-grid-tile>
         <mat-card>
             <mat-card-header>
                 <mat-card-title>{{drinkModel.strDrink}}</mat-card-title>
                 <mat-card-subtitle>{{drinkModel.strAlcoholic}}</mat-card-subtitle>
             </mat-card-header>
-            
-            <img mat-card-image src="{{drinkModel.strDrinkThumb}}"  style="width: 250px; height: 200px;">
-            <mat-card-content  style="width: 200px; overflow-y: scroll; height: 150px;">
+
+            <img mat-card-image src="{{drinkModel.strDrinkThumb}}" style="width: 250px; height: 200px;">
+            <mat-card-content style="width: 250px; overflow-y: scroll; height: 150px;">
                 <mat-list>
                     <mat-list-item *ngFor="let ig of Ingredients">
-                        <div mat-line> - {{ig}}</div>   
-                    </mat-list-item>                    
+                        <div mat-line> - {{ig}}</div>
+                    </mat-list-item>
                 </mat-list>
-                <!-- <mat-icon>brightness_1</mat-icon>1 lemon
-                <p>2 slices of orange</p>
-                <p>1/2 tequila</p> -->
+                
             </mat-card-content>
-
             <mat-card-actions>
                 <mat-grid-list cols=3>
                     <mat-grid-tile>
                         <span>
-                            <button mat-icon-button (click)="favoriteDrink()">
+                            <button mat-icon-button
+                            matTooltip="Add to Favorite"
+
+                             (click)="favoriteDrink()">
                                 <mat-icon>checked</mat-icon>
                             </button>
                         </span>
                     </mat-grid-tile>
                     <mat-grid-tile>
                         <span>
+
+                            <button 
+                            mat-icon-button 
+                            matTooltip="See more"
+                            (click)="seeMore()">
+                                <mat-icon> remove_red_eye
+                                </mat-icon>
+                            </button>
                         </span>
                     </mat-grid-tile>
                     <mat-grid-tile>
                         <span>
-                            <button mat-icon-button (click)="randomDrink()">
+                            <button mat-icon-button
+                            matTooltip="Next"
+                            (click)="randomDrink()">
                                 <mat-icon>close</mat-icon>
                             </button>
                         </span>

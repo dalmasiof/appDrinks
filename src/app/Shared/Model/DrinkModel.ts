@@ -1,4 +1,4 @@
-export class CockTail {
+export class DrinkModel {
     /**
      *
      */

@@ -16,6 +16,7 @@ import { DrinkRoutingModule } from './drink-routing-module';
 
 
 
+
 @NgModule({
   declarations: [
     RandomDrinkComponent,
@@ -29,13 +30,9 @@ import { DrinkRoutingModule } from './drink-routing-module';
     MatCardModule,
     HomeModule,
     MatIconModule,
-    MatListModule
-    
-     
-  ],
-
-
-  providers: [MatGridListModule],
+    MatListModule,
+  ]
+  
   
 })
 export class DrinkModule { }

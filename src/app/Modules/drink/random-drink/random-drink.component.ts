@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DrinkService } from 'src/app/Core/services/drink.service';
 
 @Component({
   selector: 'app-random-drink',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomDrinkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private drinkSvc:DrinkService) { }
 
   ngOnInit(): void {
   }
 
   randomDrink(){
-    alert("a random drink here")
+    debugger
+   this.drinkSvc.searchByName("caipirinha").toPromise().then(x=>{
+     console.log(x)
+   })
+
   }
 }

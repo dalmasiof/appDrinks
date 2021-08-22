@@ -10,7 +10,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatGridListModule } from '@angular/material/grid-list';
+import { CoreModule } from './Core/core.module';
+
 
 
 @NgModule({
@@ -25,13 +26,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatButtonModule,
     MatToolbarModule,
     BrowserAnimationsModule,
+    CoreModule
     
   ],
-  exports:[
-    MatButtonModule,
-    MatGridListModule
-  ],
-  providers: [MatGridListModule],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,8 @@ export class DrinkModel {
      *
      */
     constructor() {
+     
+
 
     }
     idDrink!: number
@@ -16,7 +18,8 @@ export class DrinkModel {
     strGlass!: string
     strInstructions!: string
     strDrinkThumb!: string
-    strIngredientArray!: string[]
+    strIngredientArray: string[] = []
+    strMeasureArray: string[] = []
     strIngredient1!: string
     strIngredient2!: string
     strIngredient3!: string
@@ -51,5 +54,7 @@ export class DrinkModel {
     strImageAttribution!: string
     strCreativeCommonsConfirmed!: string
     dateModified!: Date
+
+    
 
 }

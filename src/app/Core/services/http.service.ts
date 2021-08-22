@@ -14,7 +14,7 @@ export class HttpService <T>{
 
   public GetList(path:string){
     console.log(`${this.baseUrl}${path}`) 
-    return this.httpClient.get<[T]>(`${this.baseUrl}${path}`)
+    return this.httpClient.get<T>(`${this.baseUrl}${path}`)
   }
 
   public Get(path:string){

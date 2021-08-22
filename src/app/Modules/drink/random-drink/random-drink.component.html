@@ -4,29 +4,24 @@
     </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list cols=1 rowHeight="500px">
+<mat-grid-list *ngIf="drinkModel != null" cols=1 rowHeight="500px">
+    
     <mat-grid-tile>
         <mat-card>
             <mat-card-header>
-                <mat-card-title>Name of drink</mat-card-title>
+                <mat-card-title>{{drinkModel.strDrink}}</mat-card-title>
                 <mat-card-subtitle>Alcolic</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="https://images.stockfreeimages.com/1433/sfixl/14337344.jpg" width="100px"
+            
+            <img mat-card-image src="{{drinkModel.strDrinkThumb}}" width="100px"
                 height="200px">
             <mat-card-content  style="width: 200px; overflow: scroll; height: 100px;">
                 <mat-list>
-                    <mat-list-item>
-                        <div mat-line> - 500 g of lemon</div>   
+                    <mat-list-item *ngFor="let ig of Ingredients">
+                        <div mat-line> - {{ig}}</div>   
                     </mat-list-item>
 
-                    <mat-list-item>
-                        <div mat-line> - 500 g of lemon</div>   
-                    </mat-list-item>
-
-                    <mat-list-item>
-                        <div mat-line> - 500 g of lemon</div>   
-                    </mat-list-item>
-
+                    
                 </mat-list>
                 <!-- <mat-icon>brightness_1</mat-icon>1 lemon
                 <p>2 slices of orange</p>

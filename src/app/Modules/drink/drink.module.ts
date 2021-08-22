@@ -8,7 +8,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HomeModule } from '../home/home.module';
 import { DrinkRoutingModule } from './drink-routing-module';
 
 
@@ -28,9 +27,9 @@ import { DrinkRoutingModule } from './drink-routing-module';
     MatButtonModule,
     DrinkRoutingModule,
     MatCardModule,
-    HomeModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule
   ]
   
   

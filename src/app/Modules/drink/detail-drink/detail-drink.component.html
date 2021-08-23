@@ -1,1 +1,45 @@
-<p>detail-drink works!</p>
+<div mat-dialog-content>
+
+
+        <ng-container *ngIf="drinkDetails">
+            <mat-grid-list cols=1>
+                <mat-grid-tile>
+                    <img src="{{drinkDetails.strDrinkThumb}}" style="width: 80%; height: 100%; border-radius: 50%;">
+                </mat-grid-tile>
+            </mat-grid-list>
+     
+            <div mat-subheader>Ingredients</div>
+            <mat-list>
+                <mat-list-item *ngFor="let i of Ingredients; let x = index"> - {{i}} -
+                    <span> {{Measures[x]}}</span>
+                </mat-list-item>
+            </mat-list>
+            <br>
+            <div mat-subheader>Instructions</div>
+            <br>
+
+            <mat-list>
+                <mat-list-item>{{drinkDetails.strInstructions}}</mat-list-item>
+            </mat-list>
+            <br>
+
+            <mat-dialog-actions>
+                <mat-chip-list aria-label="str Tags">
+                    <mat-chip *ngFor="let x of strTags">{{x}}</mat-chip>
+                </mat-chip-list>
+            </mat-dialog-actions>
+        </ng-container>
+
+
+    <mat-grid-list cols=1>
+        <mat-grid-tile>
+            <ng-container *ngIf="!drinkDetails">
+                <mat-spinner></mat-spinner>
+            </ng-container>
+
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+</div>

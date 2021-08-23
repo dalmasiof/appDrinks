@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DrinkService } from 'src/app/Core/services/drink.service';
+import { DrinkModel } from 'src/app/Shared/Model/DrinkModel';
 
 @Component({
   selector: 'app-detail-drink',
@@ -9,17 +10,30 @@ import { DrinkService } from 'src/app/Core/services/drink.service';
 })
 export class DetailDrinkComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data:any,private drinkSvc:DrinkService) { }
+  drinkDetails!: DrinkModel
+  Ingredients: string[] = []
+  Measures: string[] = []
+  strTags: string[] = []
+
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private drinkSvc: DrinkService) { }
 
   ngOnInit(): void {
-    debugger
-    // this.drinkSvc.getById(this.drinkModel.idDrink).toPromise().then(x => {
-    //   drinkDetails = x.drinks[0];
-    // })
-    var x = this.data.componentInstance;
+    let drinkId = this.data.Id
+    this.drinkSvc.getById(drinkId).toPromise().then(x => {
+      if (x.drinks.length > 0)
+        this.drinkDetails = x.drinks[0];
+      console.log(this.drinkDetails)
 
-
-    console.log(this.data)
+      this.Ingredients = this.drinkSvc.createModelIngrArrs(this.drinkDetails)
+      this.Measures = this.drinkSvc.createModelMeaArrs(this.drinkDetails)
+      if(this.drinkDetails.strTags != null){
+        let arrTags = this.drinkDetails.strTags.split(',')
+        for(let i in arrTags){
+          this.strTags.push(arrTags[i].trim())
+        }
+      }
+    })
   }
 
 }

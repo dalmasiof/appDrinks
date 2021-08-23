@@ -48,7 +48,7 @@ export class RandomDrinkComponent implements OnInit {
         Id:id
       }
     }
-    )
+    ).updateSize("25%")
 
   }
 

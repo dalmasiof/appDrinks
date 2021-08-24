@@ -11,6 +11,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { CoreModule } from './Core/core.module';
+import { ColorNavButtonDirective } from './Core/directives/color-nav-button.directive';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -18,7 +20,8 @@ import { CoreModule } from './Core/core.module';
   declarations: [
     AppComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    ColorNavButtonDirective
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { CoreModule } from './Core/core.module';
     MatButtonModule,
     MatToolbarModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
+    MatMenuModule,
+
     
   ],
 

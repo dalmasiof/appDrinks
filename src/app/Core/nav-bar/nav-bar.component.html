@@ -1,5 +1,9 @@
-    <mat-toolbar>        
-        <span>My Application</span>
-        <button mat-button routerLink="Drink/Random">Drink</button>
-    </mat-toolbar>
+<mat-toolbar>
+    <span>My Application</span>
+    <button appColorNavButton mat-button routerLink="Drink/Random">Drink</button>
+    <button  mat-button [matMenuTriggerFor]="Ingredients">Ingredients</button>
+    <mat-menu #Ingredients="matMenu">
+        <button mat-menu-item routerLink="Ingredients/Search">Search</button>
+    </mat-menu>
 
+</mat-toolbar>

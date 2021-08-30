@@ -11,7 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { CoreModule } from './Core/core.module';
-import { ColorNavButtonDirective } from './Core/directives/color-nav-button.directive';
+import { ColorNavButtonDirective   } from './Core/directives/color-nav-button.directive';
 import { MatMenuModule } from '@angular/material/menu';
 
 

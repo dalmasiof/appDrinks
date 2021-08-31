@@ -12,4 +12,6 @@ export class SearchIngredientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DrinkService } from 'src/app/Core/services/drink.service';
+import { DrinkService } from 'src/app/Shared/services/drink.service';
 import { DrinkModel } from 'src/app/Shared/Model/DrinkModel';
 import { MatDialog } from '@angular/material/dialog';
 import { DetailDrinkComponent } from '../detail-drink/detail-drink.component';

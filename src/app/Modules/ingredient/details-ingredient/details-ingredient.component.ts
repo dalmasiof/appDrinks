@@ -10,14 +10,10 @@ export class DetailsIngredientComponent implements OnInit {
 
   constructor(private router:ActivatedRoute) { }
   
-  Id?:string
 
   ngOnInit(): void {
-    
-    console.log(this.router.snapshot.paramMap.get("Id"));
-      
-
-    
+    let id = this.router.snapshot.paramMap.get("Id")
+    alert(id);
   }
 
 }

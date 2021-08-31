@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { DrinkService } from 'src/app/Core/services/drink.service';
+import { DrinkService } from 'src/app/Shared/services/drink.service';
 import { DrinkModel } from 'src/app/Shared/Model/DrinkModel';
 
 @Component({

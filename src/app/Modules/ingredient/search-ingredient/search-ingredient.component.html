@@ -1,28 +1,23 @@
 <mat-grid-list cols=4 rowHeight="200px">
     <mat-grid-tile>
-
     </mat-grid-tile>
     <mat-grid-tile colspan='2'>
         <mat-form-field style="width: 100%;">
             <mat-label>Search by name...</mat-label>
-            <input id="ingName" matInput >
+            <input #inptValue (keyup)="onInputKeyUp(inptValue.value)" id="ingName" matInput >
         </mat-form-field>
     </mat-grid-tile>
-
-    <mat-grid-tile>
-         
+    <mat-grid-tile>   
     </mat-grid-tile>
-    
     <mat-grid-tile rowSpan='2'>
-         
     </mat-grid-tile >
+    <mat-grid-tile *ngIf="isLoading" colspan='2' rowSpan='1'>
+        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </mat-grid-tile>
     <mat-grid-tile colspan='2' rowSpan='2'>
         <mat-selection-list [multiple]="false" style="width: 100% !important">
-            <mat-list-option> Pepper </mat-list-option>
-            <mat-list-option> Salt </mat-list-option>
-            <mat-list-option> Paprika </mat-list-option>
+            <mat-list-option *ngFor="let ing of listIngredients"> {{ing.strIngredient}} 
+            </mat-list-option>
            </mat-selection-list>
     </mat-grid-tile>
-   
-    
 </mat-grid-list>

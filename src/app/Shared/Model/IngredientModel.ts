@@ -1,4 +1,4 @@
-export interface IngredientModel {
+export class IngredientModel {
     
         idIngredient?: number
         strIngredient?: string

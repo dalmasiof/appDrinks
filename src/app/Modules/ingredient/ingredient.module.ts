@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule} from '@angular/material/list';
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 
 
@@ -22,7 +23,7 @@ import { DetailsIngredientComponent } from './details-ingredient/details-ingredi
     MatInputModule,
     MatListModule,
     MatGridListModule,
-
+    MatProgressSpinnerModule,
     IngredientRoutingModule,
 
   ]

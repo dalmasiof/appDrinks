@@ -21,4 +21,8 @@ export class IngredientService implements IBaseRequest<IngredientAPIRespose>{
   GetRandom(): Observable<any> {
     throw new Error('Method not implemented.');
   }
+
+  t(nameString: String): Observable<any> {
+    return this._httpSvc.GetList(IngredientEndPOint.SEARCH_INGREDIENT + nameString)
+  }
 }
